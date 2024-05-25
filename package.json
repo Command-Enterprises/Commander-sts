@@ -1,0 +1,12 @@
+{
+    "name": "commander-proxy",
+    "version": "0.1.0",
+    "license": "GPL-3.0-only",
+    "description": "Commander is a swift and quite nimble proxy site tailored to elude suppression from cyberspace.",
+    "dependencies": {
+        "@tomphttp/bare-server-node": "2.0.3",
+        "rammerhead": "1.2.64",
+        "express": "4.19.2",
+        "@titaniumnetwork-dev/ultraviolet": "3.1.2"
+    }
+}
