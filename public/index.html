@@ -118,6 +118,9 @@
 </head>
 
 <body>
+    <script src="/uv/uv.bundle.js"></script>
+    <script src="/uv/uv.config.js"></script>
+    <script src="/sw.js"></script>
     <div>
         <h1>Commander
             <p>V2</p>
@@ -128,6 +131,21 @@
         </div>
         <div class="form"><input type="text" placeholder="search"></div>
     </div>
+    <script>
+        var input = document.querySelector('body div div input');
+
+        input.addEventListener('keypress', (e) => {
+            var value = e.target.value;
+
+            if (e.key === 'Enter') {
+                if (value !== '' && value.startsWith('http://') || value.startsWith('https://')) {
+                    window.location.href = '/~/uv/' + __uv$config.encodeUrl(value);
+                } else if (value !== '' && !value.startsWith('http://') || !value.startsWith('https://')) {
+                    window.location.href = '/~/uv/' + __uv$config.encodeUrl('https://www.google.com/search?q=' + value);
+                }
+            }
+        });
+    </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
