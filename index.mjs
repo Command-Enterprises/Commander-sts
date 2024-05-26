@@ -84,5 +84,5 @@ app.register(fastifyStatic, {
 });
 
 app.listen({
-    port: 8080
+    port: 8000
 });
