@@ -1,6 +1,6 @@
 {
     "name": "commander-proxy",
-    "version": "0.1.1",
+    "version": "0.1.13",
     "license": "GPL-3.0-only",
     "type": "module",
     "description": "Commander is a swift and quite nimble proxy site tailored to elude suppression from cyberspace.",
